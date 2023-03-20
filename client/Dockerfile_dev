@@ -7,6 +7,5 @@ COPY package*.json ./
 RUN npm install
 
 COPY . .
-RUN chown -R node:node ./node_modules 
 
 CMD [ -d "node_modules" ] && npm run dev || npm ci && npm run dev
